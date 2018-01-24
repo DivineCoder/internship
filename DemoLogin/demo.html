@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+function validate()  {
+    var email=document.f1.Email.value;
+    var pwd=document.f1.Password.value;
+	var sp=document.getElementById("sp1");
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    
+
+
+    if(email == "" || email== "Email" )
+    {
+      document.getElementById("sp1").innerHTML="Email Cannot Be Empty";
+	 // document.getElementById("sp1").style.color="red"
+	  return false;
+    }
+	
+    if(!(email.match(mailformat)))
+    {
+     document.getElementById("sp1").innerHTML="Wrong Email Format";
+	//document.getElementById("sp1").style.color='red';
+	 return false;
+    }
+	if( pwd== "Password")
+	{
+	 document.getElementById("sp1").innerHTML="Password Cannot Be Empty";
+	  //document.getElementById("sp1").style.color="red"
+	  return false
+	}
+
+    if( pwd.length < 8)
+    {
+      document.getElementById("sp1").innerHTML="Too Short Password";
+	  return false;
+    }
+	
+	else
+	{
+	alert("Welcome : " + email);
+	}
+
+  } 
+  </script>
+  <title> Demo Page With Validation </title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div class="bck">
+  <div class="header">
+  <h1>Demo Page</h1>
+</div>
+
+<div class="topnav">
+  <a href="#">Link1</a>
+  <a href="#">Link2</a>
+  <a href="#">Link3</a>
+</div>
+
+ <div id="div1">
+ <input type="button" Value="Sign In" class="button" id="myBtn"></button> 
+ </div>
+</div> 
+</div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+	<div class="modal-div1">
+	<br><br><br><label class="lab"> SIGN IN </label><br><br>
+	<form name="f1" onsubmit="return validate()" >
+	<input type="text" name="Email" onfocus="this.value=''" id="t1" value="Email">
+	<input type="password" onfocus="this.value=''"  name="Password" id="t1" value="Password">	
+	<span id="sp1"></span><br>
+	&nbsp  &nbsp  &nbsp <input type="checkbox" name="Keep Me logged in" style="opacity:0.4"><span>Keep Me logged in</span>  &nbsp  &nbsp  &nbsp  <a href="#" class="anc">Forgot email or Password?</a>
+	 
+	 <input type="submit" value="REGISTER" class="btn1">
+	 <input type="submit" value="SIGN IN" class="btn1" id="btt" ><br>
+	 </form>
+	 <br>
+	 <hr><h6>OR</h6><hr>
+	 
+	<a href="https://www.facebook.com/"><button class="fbbtn"> Connect with <b>Facebook</b></button></a>
+	</div>
+	<div class="modal-div2">
+	
+	</div>
+    
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
