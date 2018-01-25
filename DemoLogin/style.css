@@ -253,15 +253,15 @@ color:lightgrey;
 width:383px;
 height:580px;
 float:left;
-background-image: url('23.png');
+background-image: url('cat.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 92%;
 
 	box-sizing:border-box;
 	margin-top:-20px;
 	margin-right:-27px;
 	padding:10px;
-	margin-left:27px;
+	margin-left:21px;
 	
 }
 .anc{
