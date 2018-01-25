@@ -1,0 +1,42 @@
+<html>
+<script>
+// Define a new event.
+var SpecialEvent = new CustomEvent(
+  "SpecialMessage",
+  {
+   detail:
+   {
+     message: "Hello There",
+     time: new Date()
+   },
+   bubbles: true,
+   cancelable: true
+  });  
+  
+function AssignEvent()
+{
+var custlab=document.getElementById("CustomLabel");
+custlab.addEventListener("SpecialMessage",HandleEvent,false);
+}
+
+function FireEvent()
+{
+var Label=document.getElementById("CustomLabel");
+Label.dispatchEvent(SpecialEvent);
+}
+
+function HandleEvent(event)
+{
+document.getElementById("CustomLabel").innerHTML = "Control : " +event.currentTarget.id +
+												  " <br /> Message : " + event.detail.message + 
+												  "<br /> Time  : " + event.detail.time.toTimeString() + "<br />";
+
+}
+</script>
+
+
+<body onload="AssignEvent()">
+<label id="CustomLabel"> </label>
+<input type="submit" onclick="return FireEvent()" Value="Fire Custom Event">
+</body>
+</html>

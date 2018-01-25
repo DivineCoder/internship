@@ -1,0 +1,35 @@
+<html>
+
+<script>
+function demo()
+{
+document.body.addEventListener("myEventName", doSomething, false);
+ 
+function doSomething(e) {
+    alert("Event is called: " + e.detail.first + e.detail.middle + e.detail.last + e.detail.random);
+}
+ 
+var myEvent = new CustomEvent("myEventName",{
+											'detail':{
+												random: Math.round(Math.random() * 1000),
+												first: "Ahmed",
+												middle: "Arsalan",
+												last: "Muallim"					
+													}				
+											});
+document.body.dispatchEvent(myEvent);
+}
+
+</script>
+
+
+<body>
+
+<!-- <input type="submit" myEvent="demo()"> -->
+
+
+
+</body>
+
+
+</html>
