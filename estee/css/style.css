@@ -39,9 +39,14 @@ margin:0;
 	text-decoration:none;
 	margin-top:10px;
 }
+.mob-menu{
+	float:left;
+	display:none;
+}
 
 .logo{
 	/* background-color:black; */
+	float:left;
 	width:100%;
 	height:7%;
 }
@@ -164,8 +169,8 @@ margin-top:15px;
 
 .btn{
 width:100%;
-height:8%;
-background-color:grey;
+height:5%;
+/* background-color:grey; */
 
 }
 
@@ -395,6 +400,12 @@ input[type=text],input[type=password]
 	cursor:hand;
 	/* text-transform:uppercase; */
 }
+#f-hr{
+	display:none;
+}
+#f-h{
+	display:none;
+}
 .email-sign-up h3{
 	font-size:15px;
 	margin:18px;
@@ -490,3 +501,74 @@ text-decoration:underline;
 	margin-top:10;
 	text-align:center;
 }
+
+
+/*Mobile Side View*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+	
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.mob-menu{
+	display:none;
+}
+
+#sidenavigation{
+	display:none;
+}
+
+.sidenav .closebtn {
+    position: absolute;	
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#mob-span
+{display:none;}
+
+
+#size{
+width:10%;
+height:90%;
+margin-right:10px;
+font-size:15px;
+background-color:white;
+padding:1px;
+margin-top:3px;
+border:1px solid white;
+border-radius:100%;
+}
+/* #size:after{
+width:10%;
+height:100%;
+/* padding:1px;
+margin-top:3px;
+border:1px solid white;
+border-radius:100%;
+text-align:center;
+margin:3px;
+
+} */
