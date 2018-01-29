@@ -60,7 +60,7 @@ left:485px;
 	width:100%;
     overflow: hidden;
     /* border-left: 8px solid #4CAF50; */
-    border-bottom: 1px solid grey; 
+    /* border-bottom: 1px solid grey;  */
 	text-align:center;
 	display:block;
 
@@ -194,7 +194,7 @@ font-size:13px;
 
 .lst{
 	display:block;
-	margin-top:30px;
+	margin-top:20px;
 	margin-left:23px; 
 	font-size:15px;
 }
