@@ -2,17 +2,20 @@
 
 @media screen and (max-width:768px){
 	
-	
+	*{
+		margin:3px;
+	}
 	.search{
 		height:0%;
 		display:none;
 	}
-	.ship{
-				
+	.ship{	
+		margin-left:10px;
 		width:100%;
 	}
 	.ship #sp{display:none;}
 	.ship #sp1{
+		width:100%;
 		display:block;
 		text-align:center;
 	color:black;
@@ -21,7 +24,7 @@
 	}
 	.mob-menu{
 	float:right;
-	padding:20px;	
+	padding:25px;	
 	display:block;
 	
 	}
@@ -102,11 +105,12 @@
 	}
 	.h-rule1
 	{
-		width:80%;
-		padding:10px;
+		width:100%;
+		padding:0px;
 	}
 	.h-rule #ehr{
 		width:100%;
+		margin:0px;
 		
 	}
 	/* #size{
@@ -114,13 +118,14 @@
 	} */
 	.lst{
 	width:100%;
+	float:left;
 	padding-left:10px;	
 	}
 	.lst ul li{
 		margin-left:30px;
 	}
 	.lst ul,.lst li{	
-	font-size:30px;
+	/* font-size:30px; */
 	}
 	.sub-div4 {
 		display:none;;
@@ -128,117 +133,162 @@
 	.h-rule{
 	width:100%;
 	margin:0px;
+	
+	
+	text-align:center;
 	}
-	/* .h-rule hr{
-	width:30%;	
+/* 	.h-rule hr{		
+	width:100%;
+	margin:0px;
+	margin-top:30px;
 	} */
+	
 	.h-rule #hr1{
-	width:20%;
-	padding-left:-120px;	
+	width:100%;
+	margin:0px;
+	margin-top:40px;	
 	}
-	.h-rule #hr2{
-		width:20%;
-		padding-left:-120px;	
-	}
+	/* .h-rule #hr2{
+		width:100%;	
+		margin-top:30px;
+		margin:0px;
+		
+	} */
 	.h-rule h5{
 		padding:2px;
+		
 	}
 	.pymldiv{
-	height:40%
+	/* height:100% */
+	height:auto;
+	padding:10px;
 	}
 	.pymldiv .sub-div5,.pymldiv .sub-div6,.pymldiv .sub-div7{
 	width:25%;
 	/* padding-left:20px; */
-	padding:30px;
+	padding:10px;
 	}
 	.ourdiv{
 		display:none;
 	}
 	.mob-social{
 		display:block;
+		height:auto;
 	}
 	.mob-social hr{
 		/* padding-left:10px; */
-		width:80%;
+		width:100%;
 		height:0%
 	}
 	.mob-social h2{
 	text-align:center;	
+	/* display:inline-block; */
 	/* padding:10px; */
 	}
-	.mob-social #s-h2{
-		
-	padding:20px;
+	.mob-social  #insta img{		
+	padding:5px;
+	width:20%;
+	margin-left:0px;
+	}
+	.mob-social  #socio img{		
+	padding:5px;
+	text-align:center;
+	margin-left:10px;
 	}
 	.footer #f-hr{
-		margin:10px;
-		width:80%;
+		margin:0px;
+		width:100%;
 		
 	}
 	.f-social{
 		display:none;
 	}
 	.email-sign-up{
-	width:768px;
+	width:90%;
 	
+	}
+	#ehr{
+		margin-left:0px;
+		width:100%;
 	}
 	.email-sign-up h3{
 		text-align:center;
 		width:100%;
 		margin:0px;
-		font-size:30px;
+		font-size:25px;
 	}
 	.email-sign-up input[type=text] ,.email-sign-up  input[type=submit]{
-	width:70%;
-	margin-left:130px;
+	width:100%;
+	/* margin-left:130px; */
 	font-size:15px;
+	}
+	.btn-signup{
+		margin:20px;
+		margin-left:10px;
 	}
 
 	#f-hr{
 	display:block;
-	padding-left:20px;
+	
 	/* margin-top:-40px; */
-	width:80%;
+	
 	}
 	.footer{height:100%;}
 	.f-menu {
 		width:100%;
 		margin-top:0px;
 		margin-left:20px;
-		height:35%;
+		height:100%;
+		float:right;
+		display:inline-block;
 		/* background-color:lightgrey; */
-		text-align:center;
+		text-align:left;
+		
 	}
+	.f-menu div h4{
+	text-align:left;
+	margin-top:5px;
+	margin-bottom:5px;
+	font-size:14px;
+	text-transform:uppercase; 
+	
+}
 	.sub-div8,.sub-div9, .sub-div10, .sub-div11{
 	width:100%;
-	height:15%;
+	height:10%;
 	margin-top:10px;
 	text-align:center;
+	padding:10px;
 	float:right;
 	} 
 	.sub-div9{
-		height:30%;
+		height:25%;
+		padding:10px;
 	}
 	.sub-div11{
 		height:20%;
+		padding:10px;
 	}
 	.sub-div10{
 		height:20%;
+		padding:10px;
 	}
 	.desk-social{
 		display:none;
 	}
 	.f-menu div h4,.f-menu ul li  {
 		text-align:center;
-		width:740px;
+		width:100%;
 	}
 	#f-h{
 	display:block;
-	width:80%;
+	text-align:center;
+	width:100%;
 	}
 	
+	
 	#hhr{
-		width:80%;
+		width:100%;
 		padding-left:10px;
 	}
 	.logo{
@@ -255,7 +305,7 @@
 		padding-left:40px; */
 		display:inline-block;
 		text-align:center;
-		padding-left:220px;
+		padding-left:0px;
 	}
 	.copyrights{
 		padding-left:30px;
