@@ -48,8 +48,7 @@ table {
 body{
 	margin:0px;
 	padding:0px;
-	font-family: myFirstFont;
-	
+	font-family: myFirstFont;	
 }
 
 
@@ -153,9 +152,9 @@ padding-bottom:10px;
 margin-top:10px;
 }
 .button-div{
-	padding-top:10px;
+	padding:20px 0px;
 	width:100%;
-	padding-bottom:10px;
+	padding-bottom:20px;
 	background:lightgrey;
 	text-align:center;
 }	
@@ -180,8 +179,9 @@ margin-top:10px;
 	margin-bottom:10px;
 	float:left; 
 	border:1px solid lightgrey;
-	box-shadow:1px 1px #888888;
-	/* border-radius-top:10px; */
+	/* box-shadow:1px 1px #888888;
+	border-radius-top:10px; */
+	
 }
 .content-1:first-child{
 	margin-left:10px;
@@ -192,7 +192,8 @@ margin-top:10px;
 	height:140px;
 	background:green;
 	/* background-image:url('68.jpg'); */
-	background-size:100%;
+	background-size:cover;
+	BA
 	border-radius:3px;
 }
 .para h1{
@@ -214,7 +215,29 @@ margin-top:10px;
 	text-align:center;
 	
 }
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
 
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 @media screen and (min-width:100px) and (max-width:600px) 
 {
 	.hea{

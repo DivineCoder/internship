@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		/*setTimeout(function myfunc(){
+		var x = document.activeElement.tagName;
+		var btn = document.getElementsByTagName(x)[0];
+    	var x = btn.attributes[0].value;
+    	alert (x);
+		},1000);
+		*/
+function myf(){
+	var b=document.getElementById("demo");
+	console.log(b.parentElementNode.parentElement);
+}
+	</script>
+
+</head>
+<body id="bod" onload="myf()">
+<div id="demo">
+	
+	<input type="text" name="Something" >
+	<input type="checkbox" name="SomethingElse" onmouseover="myfunc()" >
+	<button style="color: red;">Get</button>
+
+</div>
+</div>
+
+</body>
+</html>
