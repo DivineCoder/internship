@@ -5,15 +5,16 @@
 <style >
 	.popup{
     position:absolute;
-    top:100px;
+    top:0px;
     left:0px;
     margin:0px auto;
-    width:100px;
-    height:150px;
+    width:200px;
+    height:auto;
     font-family:verdana;
     font-size:13px;
     padding:10px;
-    background-color:rgb(240,240,240);
+    background-color:grey;
+    color: white;
     border:2px solid grey;
     z-index:1;
     display:none
@@ -39,33 +40,34 @@ function myfunc(event)
     var tar=event.target;
     var msg=" ";
     var tarlen=tar.attributes.length;
+    var xaxis=event.clientX;
+    var yaxis=event.clientY;
+    console.log(xaxis);
    for(var i=0;i<tarlen;i++)
    {   	
    	msg+=tar.attributes[i].name+"="+tar.attributes[i].value+"\n";   
    }
-  setTimeout(function(){popup(msg)},2000);
+
+  popup(msg,xaxis,yaxis);
   //tar.title=msg;
   //console.log(msg);
 }
-function popup(msg) {
-	document.getElementById('test').style.display = 'block';
-   	var disp=document.getElementById("test");
-   	disp.innerHTML=msg;
+function popup(msg,x,y) {
+	var pop=document.getElementById('test');
+	pop.style.display = 'block';
+	pop.style.top=y+"px";
+	pop.style.left=x+"px";   	
+   	pop.innerHTML=msg;
 }
 function closePopup() {
     document.getElementById('test').style.display = 'none';
 }
-
-
-
-
 </script></head>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body onmouseover="myfunc(event);" onmouseout="closePopup()">
+<body onmouseover="setTimeout(function(){myfunc(event)},2000);" onmouseout="setTimeout(function(){closePopup()},1000)">
 <div id="test" class="popup">
-    This is a test message
-    <div class="cancel" onmouseout="closePopup();">close</div>
+    This is a test message    
 </div>
 <div class="hea">
 	<div class="container">

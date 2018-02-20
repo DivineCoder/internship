@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<script>
-		/*setTimeout(function myfunc(){
-		var x = document.activeElement.tagName;
-		var btn = document.getElementsByTagName(x)[0];
-    	var x = btn.attributes[0].value;
-    	alert (x);
-		},1000);
-		*/
-function myf(){
-	var b=document.getElementById("demo");
-	console.log(b.parentElementNode.parentElement);
+<style>
+#test{
+width: 100px;
+height: 80px;
+background-color: yellow;
 }
-	</script>
+</style>
+<script type="text/javascript">
+function myfunc(a){
+        var style;
+        var returns = {};
+        // FireFox and Chrome way
+        if(window.getComputedStyle){
+        	var tar=a;
+            style = window.getComputedStyle(tar);
+           	//console.log(style);
+           	
+            //console.log(Object.keys(style));
+            //console.log(tar.hasAttribute(Object.keys(style)[48]));
+            for(var i = 0, l = style.length; i < l; i++){
+            	//if()
+                var prop = style[i];
+                //console.log(prop);
+               
+                var val = style.getPropertyValue(prop,null);	    //console.log(val.value);
+           
+                returns[prop] = val;
+            }
+            console.log(returns);
+        }
+        
+     };
+   /* var element = document.getElementById("test");
+	var out = "";
+	var elementStyle = element.style;
+	console.log(elementStyle.length);
+	var computedStyle = window.getComputedStyle(element, null);
 
+for (prop in elementStyle) {
+	var check=elementStyle.hasOwnProperty(prop);
+  if (!check) {
+    out += "  " + prop + " = '" + elementStyle[prop] + "' > '" + computedStyle[prop] + "'\n";
+  }
+}
+console.log(out)
+}*/
+</script>
 </head>
-<body id="bod" onload="myf()">
-<div id="demo">
-	
-	<input type="text" name="Something" >
-	<input type="checkbox" name="SomethingElse" onmouseover="myfunc()" >
-	<button style="color: red;">Get</button>
+<body >
+<div id="test" style="color:red;font-size: 20px;" onmouseover="myfunc(this)" >This is some text</div>
 
-</div>
-</div>
 
 </body>
 </html>
